@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import painPointsData from '../../data/pain-points.json';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -298,10 +298,10 @@ export default function SolutionsPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {painPoints.map((painPoint, index) => (
-                    <>
+                    <React.Fragment key={painPoint.id}>
                       {/* Insert CTA card every 10 links */}
                       {index > 0 && index % 10 === 0 && (
-                        <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg border border-primary/20 p-6 shadow-sm mb-6">
+                        <div key={`cta-${index}`} className="col-span-1 md:col-span-2 lg:col-span-3 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg border border-primary/20 p-6 shadow-sm mb-6">
                           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                             <div>
                               <h3 className="text-xl font-semibold mb-2 text-slate-900">90% of security issues originate from code</h3>
@@ -332,7 +332,7 @@ export default function SolutionsPage() {
                           <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </div>
                       </Link>
-                    </>
+                    </React.Fragment>
                   ))}
                 </div>
               </div>

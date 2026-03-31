@@ -1,6 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import { Loader2, Shield, AlertTriangle, CheckCircle, Lock, ArrowRight } from 'lucide-react';
+import { getCachedAudit, setCachedAudit } from '../lib/cache';
+import Footer from './components/Footer';
 
 <style jsx global>{`
   @keyframes scroll {
@@ -20,11 +25,6 @@ import { useState, useEffect } from 'react';
     animation-play-state: paused;
   }
 `}</style>
-import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
-import { Loader2, Shield, AlertTriangle, CheckCircle, Lock, ArrowRight } from 'lucide-react';
-import { getCachedAudit, setCachedAudit } from '../lib/cache';
-import Footer from './components/Footer';
 
 export default function Home() {
   const [address, setAddress] = useState('');

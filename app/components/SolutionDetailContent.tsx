@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
-import painPointsData from '../../../data/pain-points.json';
+import painPointsData from '../../data/pain-points.json';
 import ReactMarkdown from 'react-markdown';
 import { ArrowRight, ArrowLeft, Shield, CheckCircle, AlertTriangle, Menu, X, Search, ChevronUp } from 'lucide-react';
-import Breadcrumbs from '../../components/Breadcrumbs';
-import TableOfContents from '../../components/TableOfContents';
-import Footer from '../../components/Footer';
+import Breadcrumbs from './Breadcrumbs';
+import TableOfContents from './TableOfContents';
+import Footer from './Footer';
 
 type PainPoint = {
   id: number;
@@ -17,7 +17,7 @@ type PainPoint = {
   category: string;
 };
 
-export default function SolutionDetailPage() {
+export default function SolutionDetailContent() {
   const router = useRouter();
   const params = useParams();
   const slug = params.slug as string;
@@ -31,8 +31,10 @@ export default function SolutionDetailPage() {
   const [showToc, setShowToc] = useState(false);
   const [showFloatingTool, setShowFloatingTool] = useState(false);
   const [tokenAddress, setTokenAddress] = useState('');
+  const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
+    console.log('useEffect started');
     console.log('Slug:', slug);
     console.log('Pain points data length:', painPointsData.length);
     if (!slug) {
@@ -44,14 +46,17 @@ export default function SolutionDetailPage() {
     if (foundPainPoint) {
       setPainPoint(foundPainPoint);
       
+      // Smart related recommendations: find 3 most relevant articles in the same category
       const sameCategorySolutions = painPointsData
         .filter(p => p.category === foundPainPoint.category && p.slug !== slug)
         .slice(0, 3);
       setRelatedSolutions(sameCategorySolutions);
       
+      // Mock article content, should be obtained via API in real project
       const content = `# ${foundPainPoint.title}\n\n## Current State of the Problem\n\n${foundPainPoint.description}\n\nThis is a significant issue in the blockchain space, affecting many users and projects.\n\n## Technical Principles\n\nThe technical root cause of this problem lies in the way smart contracts are designed and executed. Blockchain technology relies on immutable code, which means that once a contract is deployed, its logic cannot be changed. This creates unique challenges for security and functionality.\n\n## Risk Mitigation Strategies\n\n1. **Thorough Code Review**: Conduct comprehensive code reviews before deployment.\n2. **Security Audits**: Engage professional auditors to identify vulnerabilities.\n3. **Formal Verification**: Use mathematical proofs to verify contract behavior.\n4. **Gradual Deployment**: Start with small amounts of funds and gradually increase.\n5. **Bug Bounties**: Offer rewards for identifying security issues.\n\n## How Audit Pulse Can Help\n\nAudit Pulse provides an AI-powered solution to address this problem through:\n\n- **Automated Security Scanning**: Quickly identify potential vulnerabilities in smart contracts.\n- **Real-time Monitoring**: Keep track of contract behavior and detect anomalies.\n- **Comprehensive Reports**: Receive detailed analysis with actionable recommendations.\n- **User-Friendly Interface**: Easily understand complex security issues without deep technical knowledge.\n\nBy leveraging advanced AI technology, Audit Pulse helps developers and users mitigate risks and ensure the security of their smart contracts.`;
       setArticleContent(content);
       
+      // Extract H2 headings for table of contents
       const headingRegex = /^##\s+(.*)$/gm;
       const extractedHeadings: Array<{ id: string; text: string }> = [];
       let match;
@@ -62,6 +67,7 @@ export default function SolutionDetailPage() {
       }
       setHeadings(extractedHeadings);
       
+      // Process content to add internal links to other pain points
       let processed = content;
       painPointsData.forEach(p => {
         if (p.slug !== slug && processed.includes(p.title)) {
@@ -71,6 +77,7 @@ export default function SolutionDetailPage() {
       });
       setProcessedContent(processed);
       
+      // Generate FAQ items for JSON-LD
       const faqs = [
         {
           question: `What is ${foundPainPoint.title}?`,
@@ -91,6 +98,7 @@ export default function SolutionDetailPage() {
       ];
       setFaqItems(faqs);
       
+      // Generate HowTo steps for JSON-LD
       const steps = [
         {
           name: "Conduct Thorough Code Review",
@@ -119,6 +127,7 @@ export default function SolutionDetailPage() {
       ];
       setHowToSteps(steps);
     } else {
+      // If not found, redirect to solutions list page
       console.log('Pain point not found, redirecting to solutions');
       setTimeout(() => {
         router.push('/solutions');
@@ -126,23 +135,18 @@ export default function SolutionDetailPage() {
     }
   }, [slug, router, painPointsData]);
 
+  // Scroll event listener for floating toolbar
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setShowFloatingTool(scrollPosition > 300);
+      setShowFloatingTool(window.scrollY > 300);
+      setIsAtTop(window.scrollY < 100);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleAuditSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (tokenAddress) {
-      router.push(`/?address=${encodeURIComponent(tokenAddress)}`);
-    }
-  };
-
+  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -166,6 +170,7 @@ export default function SolutionDetailPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
+      {/* Header */}
       <header className="py-6 px-4 border-b border-slate-200">
         <div className="max-w-[1200px] mx-auto flex items-center justify-between">
           <a href="/" className="text-2xl font-bold">
@@ -180,6 +185,7 @@ export default function SolutionDetailPage() {
         </div>
       </header>
 
+      {/* Trust Signals Bar */}
       <div className="bg-slate-50 border-b border-slate-200 py-4">
         <div className="max-w-[1200px] mx-auto px-4 flex flex-wrap justify-center items-center gap-8">
           <div className="flex items-center gap-2 text-slate-700">
@@ -193,187 +199,187 @@ export default function SolutionDetailPage() {
         </div>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqItems.map((item, index) => ({
-              '@type': 'Question',
-              name: item.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer
-              }
-            }))
-          })
-        }}
-      />
-      
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'HowTo',
-            name: `How to Mitigate ${painPoint.title}`,
-            step: howToSteps.map((step, index) => ({
-              '@type': 'HowToStep',
-              name: step.name,
-              text: step.text
-            }))
-          })
-        }}
-      />
+      {/* Breadcrumbs */}
+      <div className="max-w-[1200px] mx-auto px-4 py-4">
+        <Breadcrumbs currentPage={painPoint.title} />
+      </div>
 
-      <main className="py-12 px-4">
-        <div className="max-w-[1200px] mx-auto">
-          <Breadcrumbs 
-            items={[
-              { label: 'Home', url: '/' },
-              { label: 'Solutions', url: '/solutions' },
-              { label: painPoint.title, url: `https://localhost:3002/solutions/${slug}`, isCurrent: true }
-            ]} 
-          />
-
-          <div className="lg:hidden mb-6">
-            <button
-              onClick={() => setShowToc(!showToc)}
-              className="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 px-4 py-2 rounded-lg transition-colors"
-            >
-              {showToc ? (
-                <>
-                  <X className="w-4 h-4" />
-                  <span>Hide Table of Contents</span>
-                </>
-              ) : (
-                <>
-                  <Menu className="w-4 h-4" />
-                  <span>Show Table of Contents</span>
-                </>
-              )}
-            </button>
-            {showToc && (
-              <div className="mt-4">
-                <TableOfContents headings={headings} />
+      {/* Main Content */}
+      <div className="max-w-[1200px] mx-auto px-4 py-8">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Sidebar / TOC */}
+          <div className="lg:w-1/4">
+            <div className="sticky top-8">
+              {/* Mobile TOC Toggle */}
+              <div className="lg:hidden mb-4">
+                <button
+                  onClick={() => setShowToc(!showToc)}
+                  className="flex items-center gap-2 w-full p-3 bg-slate-100 rounded-lg"
+                >
+                  <Menu className="w-5 h-5" />
+                  <span className="font-medium">Table of Contents</span>
+                </button>
               </div>
-            )}
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-1 hidden lg:block">
-              <TableOfContents headings={headings} />
-            </div>
-
-            <div className="lg:col-span-2">
-              <h1 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">{painPoint.title}</h1>
-              
-              {(painPoint.title.toLowerCase().includes('risk') || painPoint.title.toLowerCase().includes('scam') || painPoint.title.toLowerCase().includes('rug')) && (
-                <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded-r-md">
-                  <div className="flex items-start gap-3">
-                    <AlertTriangle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="text-lg font-medium text-red-800 mb-1">Warning: High Risk Alert</h3>
-                      <p className="text-red-700">This vulnerability poses a significant risk to your assets. Take immediate action to protect your investments.</p>
-                    </div>
-                  </div>
+              {/* TOC */}
+              {showToc && (
+                <div className="lg:hidden mb-6">
+                  <TableOfContents headings={headings} />
                 </div>
               )}
-              
-              <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg border border-primary/20 p-6 mb-8 shadow-sm">
-                <h3 className="text-lg font-semibold mb-4 text-slate-900">Suspect your token?</h3>
-                <p className="text-slate-600 mb-4">Enter the address and AI will immediately scan for this vulnerability.</p>
-                <form onSubmit={handleAuditSubmit} className="flex gap-2">
+
+              {/* Desktop TOC */}
+              <div className="hidden lg:block">
+                <TableOfContents headings={headings} />
+              </div>
+
+              {/* Interactive Micro-Audit Box */}
+              <div className="mt-8 p-4 border border-slate-200 rounded-lg bg-slate-50">
+                <h3 className="text-lg font-semibold mb-3">Micro Audit</h3>
+                <p className="text-slate-600 mb-4 text-sm">
+                  Suspect your token? Enter address, AI will scan for this vulnerability immediately.
+                </p>
+                <div className="space-y-3">
                   <input
                     type="text"
                     value={tokenAddress}
                     onChange={(e) => setTokenAddress(e.target.value)}
-                    placeholder="Enter token address"
-                    className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Paste contract address"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
-                  <button
-                    type="submit"
-                    className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
+                  <a 
+                    href={`/?address=${tokenAddress}`} 
+                    className="block w-full bg-primary hover:bg-primary/90 text-white text-center py-2 rounded-lg font-medium transition-colors"
                   >
-                    <Search className="w-4 h-4" />
-                    <span>Audit</span>
-                  </button>
-                </form>
-              </div>
-              
-              <div className="prose max-w-none mb-8">
-                <ReactMarkdown>{processedContent}</ReactMarkdown>
-              </div>
-              <div className="mt-12 flex justify-between items-center">
-                <button 
-                  onClick={() => router.push('/solutions')}
-                  className="flex items-center gap-2 text-slate-600 hover:text-primary transition-colors"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  <span>Back to solutions list</span>
-                </button>
-                <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2">
-                  <span>Learn more</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-1">
-              <div className="bg-slate-50 rounded-lg border border-slate-200 p-6 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4 text-slate-900">Related Solutions</h3>
-                <ul className="space-y-4">
-                  {relatedSolutions.map((solution) => (
-                    <li key={solution.id}>
-                      <a 
-                        href={`/solutions/${solution.slug}`}
-                        className="flex flex-col hover:text-primary transition-colors"
-                      >
-                        <span className="text-slate-900 font-medium">{solution.title}</span>
-                        <span className="text-sm text-slate-500 truncate">{solution.description}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-lg border border-primary/20 p-6 shadow-sm">
-                <div className="flex items-center gap-3 mb-3">
-                  <Shield className="w-6 h-6 text-primary" />
-                  <h3 className="text-lg font-semibold text-slate-900">Need professional security audit?</h3>
+                    Scan Now
+                  </a>
                 </div>
-                <p className="text-slate-500 mb-4">Our expert team can provide comprehensive security audit services for your smart contracts.</p>
-                <a href="mailto:457239850@qq.com" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full flex items-center justify-center gap-2">
-                  <CheckCircle className="w-4 h-4" />
-                  <span>Contact us</span>
-                </a>
               </div>
             </div>
           </div>
-        </div>
-      </main>
 
+          {/* Article Content */}
+          <div className="lg:w-3/4">
+            {/* JSON-LD Structured Data */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'FAQPage',
+                  mainEntity: faqItems.map(item => ({
+                    '@type': 'Question',
+                    name: item.question,
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: item.answer
+                    }
+                  }))
+                })
+              }}
+            />
+
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'HowTo',
+                  name: `How to mitigate ${painPoint.title}`,
+                  step: howToSteps.map(step => ({
+                    '@type': 'HowToStep',
+                    name: step.name,
+                    text: step.text
+                  }))
+                })
+              }}
+            />
+
+            {/* Alert for risk-related pages */}
+            {painPoint.category === 'security' && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-red-700">Security Alert</h3>
+                    <p className="text-red-600 text-sm mt-1">
+                      This vulnerability poses a significant risk to your assets. Always exercise caution when interacting with smart contracts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Article Title */}
+            <h1 className="text-4xl font-bold mb-6 text-slate-900">{painPoint.title}</h1>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none">
+              <ReactMarkdown>{processedContent}</ReactMarkdown>
+            </div>
+
+            {/* Related Solutions */}
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold mb-6">Related Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedSolutions.map(solution => (
+                  <a
+                    key={solution.slug}
+                    href={`/solutions/${solution.slug}`}
+                    className="block p-5 border border-slate-200 rounded-lg hover:border-primary hover:shadow-md transition-colors"
+                  >
+                    <h3 className="font-semibold mb-2">{solution.title}</h3>
+                    <p className="text-slate-600 text-sm mb-3 line-clamp-2">{solution.description}</p>
+                    <div className="flex items-center text-primary font-medium text-sm">
+                      <span>Read More</span>
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="mt-12 p-6 bg-slate-50 border border-slate-200 rounded-lg">
+              <h2 className="text-2xl font-bold mb-4">Ready to secure your smart contracts?</h2>
+              <p className="text-slate-600 mb-6">
+                Audit Pulse provides comprehensive security analysis to help you identify and mitigate vulnerabilities.
+              </p>
+              <a href="/" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>Get Started with Audit Pulse</span>
+              </a>
+            </div>
+
+            {/* Contact Us */}
+            <div className="mt-12 p-6 bg-slate-50 border border-slate-200 rounded-lg">
+              <h2 className="text-2xl font-bold mb-4">Need personalized assistance?</h2>
+              <p className="text-slate-600 mb-6">
+                Our team of security experts is ready to help you with any questions or concerns.
+              </p>
+              <a href="mailto:457239850@qq.com" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full flex items-center justify-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>Contact us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Floating Toolbar */}
       {showFloatingTool && (
-        <div className="fixed bottom-8 right-8 flex flex-col gap-2 z-50">
+        <div className="fixed bottom-8 right-8 z-50">
           <button
-            onClick={scrollToTop}
-            className="bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-full shadow-lg transition-colors"
-            aria-label="Scroll to top"
+            onClick={() => scrollToTop()}
+            className="w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors"
           >
-            <ChevronUp className="w-5 h-5" />
-          </button>
-          <button
-            onClick={() => router.push('/')}
-            className="bg-primary hover:bg-primary/90 text-white p-4 rounded-full shadow-lg transition-colors flex items-center justify-center"
-            aria-label="Quick audit"
-          >
-            <Search className="w-5 h-5" />
+            <ChevronUp className="w-6 h-6" />
           </button>
         </div>
       )}
-
-      <Footer />
     </div>
   );
 }

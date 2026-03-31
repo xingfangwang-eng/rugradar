@@ -279,13 +279,7 @@
     "description": "Cryptocurrency asset transaction tax treatment is complex and may affect actual returns.",
     "category": "income"
   },
-  {
-    "id": 41,
-    "slug": "phishing-attacks",
-    "title": "Phishing Attacks",
-    "description": "Attackers steal users' assets through counterfeit websites or contract addresses.",
-    "category": "security"
-  },
+
   {
     "id": 42,
     "slug": "private-key-management",

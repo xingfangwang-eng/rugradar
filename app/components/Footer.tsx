@@ -13,12 +13,11 @@ export default function Footer() {
               Leverage advanced AI technology to quickly identify security vulnerabilities in smart contracts and protect your assets.
             </p>
           </div>
-
         </div>
         <div className="mt-12 pt-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left">
-              <p className="text-slate-400">© 2026 Audit Pulse. All rights reserved.</p>
+              <p className="text-slate-400">&copy; 2026 Audit Pulse. All rights reserved.</p>
               <p className="text-slate-400 mt-2">Support: 457239850@qq.com</p>
             </div>
             <p className="text-slate-500 text-center md:text-right mt-4 md:mt-0 text-sm">
