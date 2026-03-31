@@ -1,0 +1,696 @@
+[
+  {
+    "id": 1,
+    "slug": "contract-security-vulnerabilities",
+    "title": "Contract Security Vulnerabilities",
+    "description": "Security vulnerabilities in smart contracts can lead to fund loss or functional anomalies, such as reentrancy attacks, overflow vulnerabilities, etc.",
+    "category": "security"
+  },
+  {
+    "id": 2,
+    "slug": "honeypot-detection",
+    "title": "Honeypot Contract Detection",
+    "description": "Difficulty in identifying contracts with honeypot logic, which may be designed to attract investors but restrict withdrawals.",
+    "category": "security"
+  },
+  {
+    "id": 3,
+    "slug": "mint-permissions",
+    "title": "Mint Permission Control",
+    "description": "Improperly set Mint permissions in contracts may lead to unlimited token minting, diluting existing holders' equity.",
+    "category": "security"
+  },
+  {
+    "id": 4,
+    "slug": "owner-blacklisting",
+    "title": "Owner Blacklisting Permission",
+    "description": "Contract owners may have the permission to blacklist users at any time, restricting users' access to their assets.",
+    "category": "security"
+  },
+  {
+    "id": 5,
+    "slug": "audit-efficiency",
+    "title": "Low Audit Efficiency",
+    "description": "Traditional audit methods are time-consuming and labor-intensive, unable to quickly respond to market changes and emerging security threats.",
+    "category": "efficiency"
+  },
+  {
+    "id": 6,
+    "slug": "real-time-monitoring",
+    "title": "Lack of Real-time Monitoring",
+    "description": "Inability to real-time monitor contract status and potential security risks, making it difficult to timely detect and respond to issues.",
+    "category": "efficiency"
+  },
+  {
+    "id": 7,
+    "slug": "gas-optimization",
+    "title": "Insufficient Gas Optimization",
+    "description": "Contract code has not undergone sufficient Gas optimization, leading to high user transaction costs.",
+    "category": "efficiency"
+  },
+  {
+    "id": 8,
+    "slug": "yield-farming-risks",
+    "title": "Yield Farming Risks",
+    "description": "DeFi yield farms have smart contract risks that may lead to principal loss.",
+    "category": "income"
+  },
+  {
+    "id": 9,
+    "slug": "token-value-dilution",
+    "title": "Token Value Dilution",
+    "description": "Improper token economic models may lead to token value dilution, affecting investor returns.",
+    "category": "income"
+  },
+  {
+    "id": 10,
+    "slug": "market-volatility-impact",
+    "title": "Market Volatility Impact",
+    "description": "Smart contracts may exhibit abnormal behavior under extreme market volatility, affecting user asset security.",
+    "category": "income"
+  },
+  {
+    "id": 11,
+    "slug": "reentrancy-attacks",
+    "title": "Reentrancy Attack Risks",
+    "description": "Smart contracts may suffer reentrancy attacks when handling external calls, leading to funds being maliciously withdrawn.",
+    "category": "security"
+  },
+  {
+    "id": 12,
+    "slug": "integer-overflow",
+    "title": "Integer Overflow Vulnerabilities",
+    "description": "Integer operations in smart contracts may lead to overflow or underflow, thereby causing security issues.",
+    "category": "security"
+  },
+  {
+    "id": 13,
+    "slug": "access-control-issues",
+    "title": "Access Control Issues",
+    "description": "Lack of proper access control mechanisms in contracts may allow unauthorized users to perform sensitive operations.",
+    "category": "security"
+  },
+  {
+    "id": 14,
+    "slug": "front-running-attacks",
+    "title": "Front-running Attacks",
+    "description": "Attackers exploit the predictability of transaction order to execute their transactions before users' transactions.",
+    "category": "security"
+  },
+  {
+    "id": 15,
+    "slug": "flash-loan-attacks",
+    "title": "Flash Loan Attacks",
+    "description": "Attackers use the instantaneous capital advantage of flash loans to manipulate prices or execute complex attack strategies.",
+    "category": "security"
+  },
+  {
+    "id": 16,
+    "slug": "oracle-manipulation",
+    "title": "Oracle Manipulation",
+    "description": "Attackers manipulate price data provided by oracles, thereby affecting smart contracts that rely on this data.",
+    "category": "security"
+  },
+  {
+    "id": 17,
+    "slug": "rug-pull-schemes",
+    "title": "Rug Pull Schemes",
+    "description": "Project teams suddenly withdraw funds after attracting sufficient capital, causing investor losses.",
+    "category": "security"
+  },
+  {
+    "id": 18,
+    "slug": "malicious-code-injection",
+    "title": "Malicious Code Injection",
+    "description": "Contracts contain hidden malicious code that executes harmful operations under specific conditions.",
+    "category": "security"
+  },
+  {
+    "id": 19,
+    "slug": "insufficient-testing",
+    "title": "Insufficient Testing",
+    "description": "Smart contracts are not fully tested before deployment, leading to potential vulnerabilities not being discovered.",
+    "category": "security"
+  },
+  {
+    "id": 20,
+    "slug": "dependency-vulnerabilities",
+    "title": "Dependency Vulnerabilities",
+    "description": "External libraries or dependencies used by smart contracts have security vulnerabilities that may be exploited by attackers.",
+    "category": "security"
+  },
+  {
+    "id": 21,
+    "slug": "slow-audit-process",
+    "title": "Slow Audit Process",
+    "description": "Traditional security audit processes take a long time, which may delay project launch time.",
+    "category": "efficiency"
+  },
+  {
+    "id": 22,
+    "slug": "high-audit-costs",
+    "title": "High Audit Costs",
+    "description": "Professional security audit services are expensive, posing a financial burden on small projects.",
+    "category": "efficiency"
+  },
+  {
+    "id": 23,
+    "slug": "manual-code-review",
+    "title": "Manual Code Review",
+    "description": "Relying on manual code review is inefficient and prone to missing potential issues.",
+    "category": "efficiency"
+  },
+  {
+    "id": 24,
+    "slug": "lack-of-automation",
+    "title": "Lack of Automation Tools",
+    "description": "Lack of automated security scanning tools leads to inefficient audit processes.",
+    "category": "efficiency"
+  },
+  {
+    "id": 25,
+    "slug": "complex-contract-logic",
+    "title": "Complex Contract Logic",
+    "description": "Smart contract logic is too complex, increasing audit difficulty and time costs.",
+    "category": "efficiency"
+  },
+  {
+    "id": 26,
+    "slug": "cross-chain-compatibility",
+    "title": "Cross-chain Compatibility",
+    "description": "Differences between different blockchain platforms require contracts to be adapted multiple times, increasing development and audit costs.",
+    "category": "efficiency"
+  },
+  {
+    "id": 27,
+    "slug": "gas-price-volatility",
+    "title": "Gas Price Volatility",
+    "description": "Gas prices fluctuate significantly during network congestion, affecting contract execution costs and user experience.",
+    "category": "efficiency"
+  },
+  {
+    "id": 28,
+    "slug": "transaction-failures",
+    "title": "High Transaction Failure Rate",
+    "description": "Smart contract transactions often fail due to insufficient Gas or other reasons, affecting user experience.",
+    "category": "efficiency"
+  },
+  {
+    "id": 29,
+    "slug": "scalability-issues",
+    "title": "Scalability Issues",
+    "description": "Smart contracts may face scalability challenges under high load, leading to transaction delays.",
+    "category": "efficiency"
+  },
+  {
+    "id": 30,
+    "slug": "debugging-difficulties",
+    "title": "Debugging Difficulties",
+    "description": "Smart contracts are difficult to debug and modify after deployment, increasing the difficulty of problem resolution.",
+    "category": "efficiency"
+  },
+  {
+    "id": 31,
+    "slug": "low-yield-opportunities",
+    "title": "Low Yield Opportunities",
+    "description": "Yield rates offered by DeFi platforms are generally low, making it difficult to meet investors' return expectations.",
+    "category": "income"
+  },
+  {
+    "id": 32,
+    "slug": "impermanent-loss",
+    "title": "Impermanent Loss",
+    "description": "Potential loss due to price volatility when providing liquidity in liquidity pools.",
+    "category": "income"
+  },
+  {
+    "id": 33,
+    "slug": "protocol-risk",
+    "title": "Protocol Risk",
+    "description": "Risks inherent in DeFi protocols, such as code vulnerabilities and economic model flaws.",
+    "category": "income"
+  },
+  {
+    "id": 34,
+    "slug": "liquidity-risks",
+    "title": "Liquidity Risks",
+    "description": "Insufficient liquidity leads to inability to exit positions in a timely manner, which may cause losses.",
+    "category": "income"
+  },
+  {
+    "id": 35,
+    "slug": "token-price-volatility",
+    "title": "Token Price Volatility",
+    "description": "Cryptocurrency token prices fluctuate剧烈ly, affecting the stability of investment returns.",
+    "category": "income"
+  },
+  {
+    "id": 36,
+    "slug": "governance-risks",
+    "title": "Governance Risks",
+    "description": "Decision-making risks that may arise during DAO governance processes, affecting protocol development and investor interests.",
+    "category": "income"
+  },
+  {
+    "id": 37,
+    "slug": "rug-pull-risks",
+    "title": "Rug Pull Risks",
+    "description": "Project teams suddenly withdraw funds, causing token prices to plummet and investors to suffer heavy losses.",
+    "category": "income"
+  },
+  {
+    "id": 38,
+    "slug": "smart-contract-failures",
+    "title": "Smart Contract Failures",
+    "description": "Smart contract execution failures lead to fund locking or loss, affecting investor returns.",
+    "category": "income"
+  },
+  {
+    "id": 39,
+    "slug": "high-gas-fees",
+    "title": "High Gas Fees",
+    "description": "Gas fees are high during network congestion, eroding investment returns.",
+    "category": "income"
+  },
+  {
+    "id": 40,
+    "slug": "tax-implications",
+    "title": "Tax Implications",
+    "description": "Cryptocurrency asset transaction tax treatment is complex and may affect actual returns.",
+    "category": "income"
+  },
+  {
+    "id": 41,
+    "slug": "phishing-attacks",
+    "title": "Phishing Attacks",
+    "description": "Attackers steal users' assets through counterfeit websites or contract addresses.",
+    "category": "security"
+  },
+  {
+    "id": 42,
+    "slug": "private-key-management",
+    "title": "Private Key Management",
+    "description": "User private keys are lost or stolen, leading to assets being inaccessible or stolen.",
+    "category": "security"
+  },
+  {
+    "id": 43,
+    "slug": "smart-contract-interaction",
+    "title": "Contract Interaction Risks",
+    "description": "Operational errors when users interact with smart contracts, leading to fund loss.",
+    "category": "security"
+  },
+  {
+    "id": 44,
+    "slug": "multi-sig-security",
+    "title": "Multi-signature Security",
+    "description": "Improper configuration of multi-signature wallets may lead to security risks.",
+    "category": "security"
+  },
+  {
+    "id": 45,
+    "slug": "bridge-security",
+    "title": "Cross-chain Bridge Security",
+    "description": "Security vulnerabilities in cross-chain bridges may lead to asset loss when transferring between different chains.",
+    "category": "security"
+  },
+  {
+    "id": 46,
+    "slug": "nft-security",
+    "title": "NFT Security",
+    "description": "Security issues in NFT contracts and transactions, such as copyright disputes and fraud.",
+    "category": "security"
+  },
+  {
+    "id": 47,
+    "slug": "decentralized-exchange-security",
+    "title": "Decentralized Exchange Security",
+    "description": "Security vulnerabilities in DEX platforms may lead to user asset loss.",
+    "category": "security"
+  },
+  {
+    "id": 48,
+    "slug": "lending-platform-risks",
+    "title": "Lending Platform Risks",
+    "description": "Collateral liquidation risks and smart contract vulnerabilities in DeFi lending platforms.",
+    "category": "security"
+  },
+  {
+    "id": 49,
+    "slug": "insurance-protocols",
+    "title": "Insurance Protocol Security",
+    "description": "Smart contract vulnerabilities in DeFi insurance protocols may affect the claims process.",
+    "category": "security"
+  },
+  {
+    "id": 50,
+    "slug": "stablecoin-risks",
+    "title": "Stablecoin Risks",
+    "description": "Price volatility risks and smart contract vulnerabilities of stablecoins.",
+    "category": "security"
+  },
+  {
+    "id": 51,
+    "slug": "blockchain-scalability",
+    "title": "Blockchain Scalability",
+    "description": "Throughput limitations of blockchain networks, leading to transaction delays and high fees.",
+    "category": "efficiency"
+  },
+  {
+    "id": 52,
+    "slug": "transaction-confirmation-time",
+    "title": "Transaction Confirmation Time",
+    "description": "Blockchain transaction confirmation time is too long, affecting user experience and business efficiency.",
+    "category": "efficiency"
+  },
+  {
+    "id": 53,
+    "slug": "smart-contract-deployment",
+    "title": "Contract Deployment Process",
+    "description": "Smart contract deployment process is complex, requiring multiple steps and prone to errors.",
+    "category": "efficiency"
+  },
+  {
+    "id": 54,
+    "slug": "code-optimization",
+    "title": "Code Optimization",
+    "description": "Smart contract code optimization requires professional knowledge, which ordinary developers find difficult to master.",
+    "category": "efficiency"
+  },
+  {
+    "id": 55,
+    "slug": "testing-frameworks",
+    "title": "Testing Frameworks",
+    "description": "Smart contract testing frameworks have a steep learning curve, affecting development efficiency.",
+    "category": "efficiency"
+  },
+  {
+    "id": 56,
+    "slug": "documentation",
+    "title": "Documentation Completeness",
+    "description": "Smart contract documentation is incomplete, leading to development and audit difficulties.",
+    "category": "efficiency"
+  },
+  {
+    "id": 57,
+    "slug": "developer-tools",
+    "title": "Development Tools",
+    "description": "Smart contract development tools have limited functionality, affecting development efficiency.",
+    "category": "efficiency"
+  },
+  {
+    "id": 58,
+    "slug": "version-control",
+    "title": "Version Control",
+    "description": "Smart contract version control and upgrade management are complex and prone to problems.",
+    "category": "efficiency"
+  },
+  {
+    "id": 59,
+    "slug": "security-scanning-tools",
+    "title": "Security Scanning Tools",
+    "description": "Security scanning tools have insufficient accuracy and comprehensiveness, potentially missing vulnerabilities.",
+    "category": "efficiency"
+  },
+  {
+    "id": 60,
+    "slug": "regulatory-compliance",
+    "title": "Regulatory Compliance",
+    "description": "Smart contract regulatory compliance requirements are complex, increasing development and audit costs.",
+    "category": "efficiency"
+  },
+  {
+    "id": 61,
+    "slug": "yield-aggregation",
+    "title": "Yield Aggregation",
+    "description": "Manually finding and managing high-yield opportunities is time-consuming and inefficient.",
+    "category": "income"
+  },
+  {
+    "id": 62,
+    "slug": "compound-interest",
+    "title": "Compound Interest Strategies",
+    "description": "Lack of automated compound interest strategies leads to return loss.",
+    "category": "income"
+  },
+  {
+    "id": 63,
+    "slug": "risk-management",
+    "title": "Risk Management",
+    "description": "Lack of effective risk management strategies leads to overly high portfolio risk.",
+    "category": "income"
+  },
+  {
+    "id": 64,
+    "slug": "diversification",
+    "title": "Investment Diversification",
+    "description": "Cryptocurrency investment portfolios lack diversification, concentrating risk.",
+    "category": "income"
+  },
+  {
+    "id": 65,
+    "slug": "market-timing",
+    "title": "Market Timing",
+    "description": "Difficulty in把握ing the optimal entry and exit timing in the cryptocurrency market.",
+    "category": "income"
+  },
+  {
+    "id": 66,
+    "slug": "staking-rewards",
+    "title": "Staking Rewards",
+    "description": "Staking reward calculation and collection processes are complex, affecting user experience.",
+    "category": "income"
+  },
+  {
+    "id": 67,
+    "slug": "liquidity-mining",
+    "title": "Liquidity Mining",
+    "description": "Liquidity mining returns are unstable and have Impermanent Loss risks.",
+    "category": "income"
+  },
+  {
+    "id": 68,
+    "slug": "yield-farming-strategies",
+    "title": "Yield Farming Strategies",
+    "description": "Lack of effective yield farming strategies leads to returns below market average.",
+    "category": "income"
+  },
+  {
+    "id": 69,
+    "slug": "tax-optimization",
+    "title": "Tax Optimization",
+    "description": "Lack of cryptocurrency asset tax optimization strategies leads to high tax burdens.",
+    "category": "income"
+  },
+  {
+    "id": 70,
+    "slug": "portfolio-tracking",
+    "title": "Portfolio Tracking",
+    "description": "Lack of effective portfolio tracking tools makes it difficult to掌握 investment performance.",
+    "category": "income"
+  },
+  {
+    "id": 71,
+    "slug": "smart-contract-auditing",
+    "title": "Smart Contract Auditing",
+    "description": "Smart contract auditing fees are high, making it difficult for small projects to afford.",
+    "category": "security"
+  },
+  {
+    "id": 72,
+    "slug": "security-best-practices",
+    "title": "Security Best Practices",
+    "description": "Developers' insufficient understanding of smart contract security best practices leads to security vulnerabilities.",
+    "category": "security"
+  },
+  {
+    "id": 73,
+    "slug": "penetration-testing",
+    "title": "Penetration Testing",
+    "description": "Smart contracts lack effective penetration testing, making it difficult to discover potential vulnerabilities.",
+    "category": "security"
+  },
+  {
+    "id": 74,
+    "slug": "vulnerability-disclosure",
+    "title": "Vulnerability Disclosure",
+    "description": "Smart contract vulnerability disclosure and repair processes are不完善, leading to vulnerabilities being maliciously exploited.",
+    "category": "security"
+  },
+
+  {
+    "id": 76,
+    "slug": "secure-coding",
+    "title": "Secure Coding",
+    "description": "Developers lack secure coding awareness, leading to security risks in smart contracts.",
+    "category": "security"
+  },
+  {
+    "id": 77,
+    "slug": "code-review-process",
+    "title": "Code Review Process",
+    "description": "Smart contract code review processes are not standardized, easily missing security issues.",
+    "category": "security"
+  },
+  {
+    "id": 78,
+    "slug": "security-tools",
+    "title": "Security Tools",
+    "description": "Smart contract security tools have limited functionality, making it difficult to detect complex security vulnerabilities.",
+    "category": "security"
+  },
+  {
+    "id": 79,
+    "slug": "security-education",
+    "title": "Security Education",
+    "description": "Developers and users lack smart contract security knowledge, making them vulnerable to attacks.",
+    "category": "security"
+  },
+  {
+    "id": 80,
+    "slug": "incident-response",
+    "title": "Incident Response",
+    "description": "Smart contract security incident response mechanisms are不完善, leading to expanded losses.",
+    "category": "security"
+  },
+  {
+    "id": 81,
+    "slug": "development-efficiency",
+    "title": "Development Efficiency",
+    "description": "Smart contract development efficiency is low, leading to extended project launch times.",
+    "category": "efficiency"
+  },
+  {
+    "id": 82,
+    "slug": "testing-efficiency",
+    "title": "Testing Efficiency",
+    "description": "Smart contract testing processes are time-consuming and labor-intensive, affecting development progress.",
+    "category": "efficiency"
+  },
+  {
+    "id": 83,
+    "slug": "deployment-efficiency",
+    "title": "Deployment Efficiency",
+    "description": "Smart contract deployment process is complex, requiring multiple steps and affecting efficiency.",
+    "category": "efficiency"
+  },
+  {
+    "id": 84,
+    "slug": "monitoring-efficiency",
+    "title": "Monitoring Efficiency",
+    "description": "Smart contract monitoring tools are inefficient, making it difficult to discover issues in real-time.",
+    "category": "efficiency"
+  },
+  {
+    "id": 85,
+    "slug": "debugging-efficiency",
+    "title": "Debugging Efficiency",
+    "description": "Smart contract debugging processes are complex, making it difficult to quickly locate and resolve problems.",
+    "category": "efficiency"
+  },
+  {
+    "id": 86,
+    "slug": "optimization-efficiency",
+    "title": "Optimization Efficiency",
+    "description": "Smart contract optimization processes are time-consuming and labor-intensive, requiring professional knowledge.",
+    "category": "efficiency"
+  },
+  {
+    "id": 87,
+    "slug": "integration-efficiency",
+    "title": "Integration Efficiency",
+    "description": "Smart contract integration with other systems is complex, affecting development efficiency.",
+    "category": "efficiency"
+  },
+  {
+    "id": 88,
+    "slug": "scaling-efficiency",
+    "title": "Scaling Efficiency",
+    "description": "Smart contract scaling processes are complex, making it difficult to adapt to business growth needs.",
+    "category": "efficiency"
+  },
+  {
+    "id": 89,
+    "slug": "maintenance-efficiency",
+    "title": "Maintenance Efficiency",
+    "description": "Smart contract maintenance processes are complex, making it difficult to quickly respond to business requirement changes.",
+    "category": "efficiency"
+  },
+  {
+    "id": 90,
+    "slug": "documentation-efficiency",
+    "title": "Documentation Efficiency",
+    "description": "Smart contract documentation writing and maintenance processes are time-consuming and labor-intensive, affecting development efficiency.",
+    "category": "efficiency"
+  },
+  {
+    "id": 91,
+    "slug": "yield-optimization",
+    "title": "Yield Optimization",
+    "description": "Lack of effective yield optimization strategies leads to investment returns below market average.",
+    "category": "income"
+  },
+  {
+    "id": 92,
+    "slug": "risk-adjusted-returns",
+    "title": "Risk-adjusted Returns",
+    "description": "Lack of assessment of risk-adjusted returns leads to unscientific investment decisions.",
+    "category": "income"
+  },
+  {
+    "id": 93,
+    "slug": "passive-income",
+    "title": "Passive Income",
+    "description": "Lack of stable passive income sources makes it difficult to achieve financial freedom.",
+    "category": "income"
+  },
+  {
+    "id": 94,
+    "slug": "investment-strategies",
+    "title": "Investment Strategies",
+    "description": "Lack of effective cryptocurrency investment strategies leads to unstable investment returns.",
+    "category": "income"
+  },
+  {
+    "id": 95,
+    "slug": "market-analysis",
+    "title": "Market Analysis",
+    "description": "Lack of professional market analysis tools makes it difficult to make informed investment decisions.",
+    "category": "income"
+  },
+  {
+    "id": 96,
+    "slug": "portfolio-management",
+    "title": "Portfolio Management",
+    "description": "Lack of effective portfolio management tools makes it difficult to optimize asset allocation.",
+    "category": "income"
+  },
+  {
+    "id": 97,
+    "slug": "tax-strategies",
+    "title": "Tax Strategies",
+    "description": "Lack of effective cryptocurrency tax strategies leads to high tax burdens.",
+    "category": "income"
+  },
+  {
+    "id": 98,
+    "slug": "retirement-planning",
+    "title": "Retirement Planning",
+    "description": "Lack of cryptocurrency-based retirement planning strategies makes it difficult to achieve long-term financial goals.",
+    "category": "income"
+  },
+  {
+    "id": 99,
+    "slug": "wealth-preservation",
+    "title": "Wealth Preservation",
+    "description": "Cryptocurrency prices are highly volatile, making it difficult to achieve wealth preservation.",
+    "category": "income"
+  },
+  {
+    "id": 100,
+    "slug": "income-diversification",
+    "title": "Income Diversification",
+    "description": "Lack of diversified cryptocurrency income sources concentrates risk.",
+    "category": "income"
+  }
+]
