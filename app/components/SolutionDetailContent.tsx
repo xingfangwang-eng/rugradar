@@ -201,7 +201,13 @@ export default function SolutionDetailContent() {
 
       {/* Breadcrumbs */}
       <div className="max-w-[1200px] mx-auto px-4 py-4">
-        <Breadcrumbs currentPage={painPoint.title} />
+        <Breadcrumbs 
+          items={[
+            { label: 'Home', url: '/' },
+            { label: 'Solutions', url: '/solutions' },
+            { label: painPoint.title, url: '', isCurrent: true }
+          ]} 
+        />
       </div>
 
       {/* Main Content */}
