@@ -8,6 +8,7 @@ import { ArrowRight, ArrowLeft, Shield, CheckCircle, AlertTriangle, Menu, X, Sea
 import Breadcrumbs from './Breadcrumbs';
 import TableOfContents from './TableOfContents';
 import Footer from './Footer';
+import BridgeBleedCalculator from './BridgeBleedCalculator';
 
 type PainPoint = {
   id: number;
@@ -445,6 +446,9 @@ export default function SolutionDetailContent() {
                 </div>
               </div>
             )}
+
+            {/* The Bridge Bleed Calculator for bridge-security */}
+            {slug === 'bridge-security' && <BridgeBleedCalculator />}
 
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
