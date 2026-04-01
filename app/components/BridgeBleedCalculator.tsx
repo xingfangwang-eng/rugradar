@@ -218,6 +218,74 @@ export default function BridgeBleedCalculator() {
         </div>
       </div>
 
+      {/* Logic X-Ray (Code透视窗) */}
+      <div className="mt-8">
+        <h4 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
+          <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+          Logic X-Ray
+        </h4>
+        <div className="bg-zinc-950 border border-zinc-800 rounded-lg p-5 font-mono text-sm overflow-x-auto">
+          <pre className="text-green-400">
+{`// Step 1: Scan GoPlus for Honeypot traps [1.5] - cross-chain bridge audit
+const risk = await goPlus.checkBridgeContract(CA);
+
+// Step 2: Monitor sudden liquidity pull [1.2] - DeFi bridge monitor
+if (pool.liquidity < threshold) executeAutoSell();
+
+// Step 3: Detect multi-signature anomalies - honeypot scanner
+const signatureStatus = await checkMultiSigStatus(bridgeAddress);
+
+// Step 4: Real-time alert via webhook
+if (risk > 75) {
+  await sendInstantAlert(webhookUrl);
+  await executeAutoSell(); // Auto-sell to protect assets
+}
+
+// Step 5: Continuous monitoring
+setInterval(async () => {
+  const newRisk = await goPlus.checkBridgeContract(CA);
+  if (newRisk > previousRisk) {
+    await sendAlert("Risk level increased!");
+  }
+  previousRisk = newRisk;
+}, 1000); // Real-time monitoring every second`}
+          </pre>
+        </div>
+
+        {/* Expert Signature */}
+        <div className="mt-6 p-4 bg-zinc-900 border border-zinc-800 rounded-lg flex items-start gap-4">
+          <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg className="w-6 h-6 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h5 className="text-white font-bold">The Anti-Rug Operative</h5>
+              <span className="text-zinc-500 text-xs">防砸盘特工</span>
+            </div>
+            <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
+              I spent 5 years watching degens get wiped out by $10B+ in bridge hacks [1.3]. 
+              I built this tool to make high-level security accessible to everyone, 
+              not just corporations paying SaaS taxes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Final CTA Button */}
+      <a
+        href="/"
+        className="block w-full py-5 px-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-center font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-red-600/30 mt-8 animate-pulse"
+      >
+        <span className="flex items-center justify-center gap-2">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          DESTROY BRIDGE VULNERABILITIES NOW
+        </span>
+      </a>
+
       {/* Disclaimer */}
       <p className="text-zinc-600 text-xs text-center mt-4">
         *Calculations based on historical cross-chain bridge hack data. Average detection time may vary.
