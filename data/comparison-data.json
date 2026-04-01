@@ -1,0 +1,1864 @@
+[
+  {
+    "id": 1,
+    "keyword": "Contract Security Vulnerabilities",
+    "slug": "contract-security-vulnerabilities",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "keyword": "Honeypot Contract Detection",
+    "slug": "honeypot-detection",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "keyword": "Mint Permission Control",
+    "slug": "mint-permissions",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "keyword": "Owner Blacklisting Permission",
+    "slug": "owner-blacklisting",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "keyword": "Low Audit Efficiency",
+    "slug": "audit-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "72-96 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "keyword": "Lack of Real-time Monitoring",
+    "slug": "real-time-monitoring",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "1-2 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "keyword": "Insufficient Gas Optimization",
+    "slug": "gas-optimization",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "keyword": "Yield Farming Risks",
+    "slug": "yield-farming-risks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "keyword": "Token Value Dilution",
+    "slug": "token-value-dilution",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "keyword": "Market Volatility Impact",
+    "slug": "market-volatility-impact",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "12-24 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,399",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "keyword": "Reentrancy Attack Risks",
+    "slug": "reentrancy-attacks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "keyword": "Integer Overflow Vulnerabilities",
+    "slug": "integer-overflow",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 13,
+    "keyword": "Access Control Issues",
+    "slug": "access-control-issues",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 14,
+    "keyword": "Front-running Attacks",
+    "slug": "front-running-attacks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "12-24 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 15,
+    "keyword": "Flash Loan Attacks",
+    "slug": "flash-loan-attacks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 16,
+    "keyword": "Oracle Manipulation",
+    "slug": "oracle-manipulation",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 17,
+    "keyword": "Rug Pull Schemes",
+    "slug": "rug-pull-schemes",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 18,
+    "keyword": "Malicious Code Injection",
+    "slug": "malicious-code-injection",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "72-96 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 19,
+    "keyword": "Insufficient Testing",
+    "slug": "insufficient-testing",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 20,
+    "keyword": "Dependency Vulnerabilities",
+    "slug": "dependency-vulnerabilities",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 21,
+    "keyword": "Slow Audit Process",
+    "slug": "slow-audit-process",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "96-120 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 22,
+    "keyword": "High Audit Costs",
+    "slug": "high-audit-costs",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "72-96 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 23,
+    "keyword": "Manual Code Review",
+    "slug": "manual-code-review",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 24,
+    "keyword": "Lack of Automation Tools",
+    "slug": "lack-of-automation",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 25,
+    "keyword": "Complex Contract Logic",
+    "slug": "complex-contract-logic",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "60-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 26,
+    "keyword": "Cross-chain Compatibility",
+    "slug": "cross-chain-compatibility",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "72-96 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 27,
+    "keyword": "Gas Price Volatility",
+    "slug": "gas-price-volatility",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "12-24 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 28,
+    "keyword": "High Transaction Failure Rate",
+    "slug": "transaction-failures",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 29,
+    "keyword": "Scalability Issues",
+    "slug": "scalability-issues",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 30,
+    "keyword": "Debugging Difficulties",
+    "slug": "debugging-difficulties",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 31,
+    "keyword": "Low Yield Opportunities",
+    "slug": "low-yield-opportunities",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 32,
+    "keyword": "Impermanent Loss",
+    "slug": "impermanent-loss",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "12-24 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 33,
+    "keyword": "Protocol Risk",
+    "slug": "protocol-risk",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "keyword": "Liquidity Risks",
+    "slug": "liquidity-risks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 35,
+    "keyword": "Token Price Volatility",
+    "slug": "token-price-volatility",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "12-24 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 36,
+    "keyword": "Governance Risks",
+    "slug": "governance-risks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,399",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 37,
+    "keyword": "Rug Pull Risks",
+    "slug": "rug-pull-risks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 38,
+    "keyword": "Smart Contract Failures",
+    "slug": "smart-contract-failures",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 39,
+    "keyword": "High Gas Fees",
+    "slug": "high-gas-fees",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "12-24 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 40,
+    "keyword": "Tax Implications",
+    "slug": "tax-implications",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 42,
+    "keyword": "Private Key Management",
+    "slug": "private-key-management",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 43,
+    "keyword": "Contract Interaction Risks",
+    "slug": "smart-contract-interaction",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 44,
+    "keyword": "Multi-signature Security",
+    "slug": "multi-sig-security",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 45,
+    "keyword": "Cross-chain Bridge Security",
+    "slug": "bridge-security",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "72-96 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 46,
+    "keyword": "NFT Security",
+    "slug": "nft-security",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 47,
+    "keyword": "Decentralized Exchange Security",
+    "slug": "decentralized-exchange-security",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 48,
+    "keyword": "Lending Platform Risks",
+    "slug": "lending-platform-risks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 49,
+    "keyword": "Insurance Protocol Security",
+    "slug": "insurance-protocols",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,399",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 50,
+    "keyword": "Stablecoin Risks",
+    "slug": "stablecoin-risks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 51,
+    "keyword": "Blockchain Scalability",
+    "slug": "blockchain-scalability",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "60-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 52,
+    "keyword": "Transaction Confirmation Time",
+    "slug": "transaction-confirmation-time",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 53,
+    "keyword": "Contract Deployment Process",
+    "slug": "smart-contract-deployment",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 54,
+    "keyword": "Code Optimization",
+    "slug": "code-optimization",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 55,
+    "keyword": "Testing Frameworks",
+    "slug": "testing-frameworks",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 56,
+    "keyword": "Documentation Completeness",
+    "slug": "documentation",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 57,
+    "keyword": "Development Tools",
+    "slug": "developer-tools",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 58,
+    "keyword": "Version Control",
+    "slug": "version-control",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 59,
+    "keyword": "Security Scanning Tools",
+    "slug": "security-scanning-tools",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 60,
+    "keyword": "Regulatory Compliance",
+    "slug": "regulatory-compliance",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "60-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 61,
+    "keyword": "Yield Aggregation",
+    "slug": "yield-aggregation",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 62,
+    "keyword": "Compound Interest Strategies",
+    "slug": "compound-interest",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 63,
+    "keyword": "Risk Management",
+    "slug": "risk-management",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,399",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 64,
+    "keyword": "Investment Diversification",
+    "slug": "diversification",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 65,
+    "keyword": "Market Timing",
+    "slug": "market-timing",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 66,
+    "keyword": "Staking Rewards",
+    "slug": "staking-rewards",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 67,
+    "keyword": "Liquidity Mining",
+    "slug": "liquidity-mining",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 68,
+    "keyword": "Yield Farming Strategies",
+    "slug": "yield-farming-strategies",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 69,
+    "keyword": "Tax Optimization",
+    "slug": "tax-optimization",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 70,
+    "keyword": "Portfolio Tracking",
+    "slug": "portfolio-tracking",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "12-24 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 71,
+    "keyword": "Smart Contract Auditing",
+    "slug": "smart-contract-auditing",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "72-96 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 72,
+    "keyword": "Security Best Practices",
+    "slug": "security-best-practices",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 73,
+    "keyword": "Penetration Testing",
+    "slug": "penetration-testing",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "60-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 74,
+    "keyword": "Vulnerability Disclosure",
+    "slug": "vulnerability-disclosure",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,399",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 76,
+    "keyword": "Secure Coding",
+    "slug": "secure-coding",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 77,
+    "keyword": "Code Review Process",
+    "slug": "code-review-process",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 78,
+    "keyword": "Security Tools",
+    "slug": "security-tools",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 79,
+    "keyword": "Security Education",
+    "slug": "security-education",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 80,
+    "keyword": "Incident Response",
+    "slug": "incident-response",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,599",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 81,
+    "keyword": "Development Efficiency",
+    "slug": "development-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 82,
+    "keyword": "Testing Efficiency",
+    "slug": "testing-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 83,
+    "keyword": "Deployment Efficiency",
+    "slug": "deployment-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 84,
+    "keyword": "Monitoring Efficiency",
+    "slug": "monitoring-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 85,
+    "keyword": "Debugging Efficiency",
+    "slug": "debugging-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 86,
+    "keyword": "Optimization Efficiency",
+    "slug": "optimization-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,399",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 87,
+    "keyword": "Integration Efficiency",
+    "slug": "integration-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 88,
+    "keyword": "Scaling Efficiency",
+    "slug": "scaling-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 89,
+    "keyword": "Maintenance Efficiency",
+    "slug": "maintenance-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 90,
+    "keyword": "Documentation Efficiency",
+    "slug": "documentation-efficiency",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 91,
+    "keyword": "Yield Optimization",
+    "slug": "yield-optimization",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 92,
+    "keyword": "Risk-adjusted Returns",
+    "slug": "risk-adjusted-returns",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,299",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 93,
+    "keyword": "Passive Income",
+    "slug": "passive-income",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$899",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 94,
+    "keyword": "Investment Strategies",
+    "slug": "investment-strategies",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,099",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 95,
+    "keyword": "Market Analysis",
+    "slug": "market-analysis",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$999",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 96,
+    "keyword": "Portfolio Management",
+    "slug": "portfolio-management",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,399",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 97,
+    "keyword": "Tax Strategies",
+    "slug": "tax-strategies",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "24-36 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$799",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 98,
+    "keyword": "Retirement Planning",
+    "slug": "retirement-planning",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-60 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,499",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 99,
+    "keyword": "Wealth Preservation",
+    "slug": "wealth-preservation",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "48-72 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,699",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  },
+  {
+    "id": 100,
+    "keyword": "Income Diversification",
+    "slug": "income-diversification",
+    "comparison": {
+      "detection_speed": {
+        "traditional_saas": "36-48 hours",
+        "rugradar": "Instant"
+      },
+      "monthly_tax": {
+        "traditional_saas": "$1,199",
+        "rugradar": "$0"
+      },
+      "privacy_control": {
+        "traditional_saas": "Limited",
+        "rugradar": "100% Private"
+      }
+    }
+  }
+]

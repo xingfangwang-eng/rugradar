@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import painPointsData from '../../../data/pain-points.json';
+import comparisonData from '../../../data/comparison-data.json';
 import ReactMarkdown from 'react-markdown';
 import { ArrowRight, ArrowLeft, Shield, CheckCircle, AlertTriangle, Menu, X, Search, ChevronUp } from 'lucide-react';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import TableOfContents from '../../components/TableOfContents';
+import VerdictTable from '../../components/VerdictTable';
 import Footer from '../../components/Footer';
 
 type PainPoint = {
@@ -31,16 +33,11 @@ export default function SolutionDetailPage() {
   const [showToc, setShowToc] = useState(false);
   const [showFloatingTool, setShowFloatingTool] = useState(false);
   const [tokenAddress, setTokenAddress] = useState('');
+  const [comparisonInfo, setComparisonInfo] = useState<{ keyword: string; saasPrice: string } | null>(null);
 
   useEffect(() => {
-    console.log('Slug:', slug);
-    console.log('Pain points data length:', painPointsData.length);
-    if (!slug) {
-      console.log('Slug is undefined');
-      return;
-    }
+    if (!slug) return;
     const foundPainPoint = painPointsData.find(p => p.slug === slug);
-    console.log('Found pain point:', foundPainPoint);
     if (foundPainPoint) {
       setPainPoint(foundPainPoint);
       
@@ -49,7 +46,15 @@ export default function SolutionDetailPage() {
         .slice(0, 3);
       setRelatedSolutions(sameCategorySolutions);
       
-      const content = `# ${foundPainPoint.title}\n\n## Current State of the Problem\n\n${foundPainPoint.description}\n\nThis is a significant issue in the blockchain space, affecting many users and projects.\n\n## Technical Principles\n\nThe technical root cause of this problem lies in the way smart contracts are designed and executed. Blockchain technology relies on immutable code, which means that once a contract is deployed, its logic cannot be changed. This creates unique challenges for security and functionality.\n\n## Risk Mitigation Strategies\n\n1. **Thorough Code Review**: Conduct comprehensive code reviews before deployment.\n2. **Security Audits**: Engage professional auditors to identify vulnerabilities.\n3. **Formal Verification**: Use mathematical proofs to verify contract behavior.\n4. **Gradual Deployment**: Start with small amounts of funds and gradually increase.\n5. **Bug Bounties**: Offer rewards for identifying security issues.\n\n## How Audit Pulse Can Help\n\nAudit Pulse provides an AI-powered solution to address this problem through:\n\n- **Automated Security Scanning**: Quickly identify potential vulnerabilities in smart contracts.\n- **Real-time Monitoring**: Keep track of contract behavior and detect anomalies.\n- **Comprehensive Reports**: Receive detailed analysis with actionable recommendations.\n- **User-Friendly Interface**: Easily understand complex security issues without deep technical knowledge.\n\nBy leveraging advanced AI technology, Audit Pulse helps developers and users mitigate risks and ensure the security of their smart contracts.`;
+      const foundComparison = comparisonData.find(c => c.slug === slug);
+      if (foundComparison) {
+        setComparisonInfo({
+          keyword: foundComparison.keyword,
+          saasPrice: foundComparison.comparison.monthly_tax.traditional_saas
+        });
+      }
+      
+      const content = `# ${foundPainPoint.title}\n\n## Current State of Problem\n\n${foundPainPoint.description}\n\nThis is a significant issue in the blockchain space, affecting many users and projects.\n\n## Technical Principles\n\nThe technical root cause of this problem lies in the way smart contracts are designed and executed. Blockchain technology relies on immutable code, which means that once a contract is deployed, its logic cannot be changed. This creates unique challenges for security and functionality.\n\n## Risk Mitigation Strategies\n\n1. **Thorough Code Review**: Conduct comprehensive code reviews before deployment.\n2. **Security Audits**: Engage professional auditors to identify vulnerabilities.\n3. **Formal Verification**: Use mathematical proofs to verify contract behavior.\n4. **Gradual Deployment**: Start with small amounts of funds and gradually increase.\n5. **Bug Bounties**: Offer rewards for identifying security issues.\n\n## How Audit Pulse Can Help\n\nAudit Pulse provides an AI-powered solution to address this problem through:\n\n- **Automated Security Scanning**: Quickly identify potential vulnerabilities in smart contracts.\n- **Real-time Monitoring**: Keep track of contract behavior and detect anomalies.\n- **Comprehensive Reports**: Receive detailed analysis with actionable recommendations.\n- **User-Friendly Interface**: Easily understand complex security issues without deep technical knowledge.\n\nBy leveraging advanced AI technology, Audit Pulse helps developers and users mitigate risks and ensure the security of their smart contracts.`;
       setArticleContent(content);
       
       const headingRegex = /^##\s+(.*)$/gm;
@@ -119,10 +124,7 @@ export default function SolutionDetailPage() {
       ];
       setHowToSteps(steps);
     } else {
-      console.log('Pain point not found, redirecting to solutions');
-      setTimeout(() => {
-        router.push('/solutions');
-      }, 0);
+      router.push('/solutions');
     }
   }, [slug, router, painPointsData]);
 
@@ -135,6 +137,73 @@ export default function SolutionDetailPage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!painPoint || faqItems.length === 0 || howToSteps.length === 0) return;
+
+    const createJsonLdScript = (data: any) => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(data);
+      document.head.appendChild(script);
+      return script;
+    };
+
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer
+        }
+      }))
+    };
+
+    const howToData = {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: `How to Mitigate ${painPoint.title}`,
+      step: howToSteps.map((step) => ({
+        '@type': 'HowToStep',
+        name: step.name,
+        text: step.text
+      }))
+    };
+
+    const comparisonSchemaData = {
+      '@context': 'https://schema.org',
+      '@type': 'ComparisonChart',
+      name: `Comparison: Traditional SaaS vs RugRadar for ${painPoint.title}`,
+      description: 'A detailed comparison between traditional SaaS solutions and RugRadar for addressing blockchain security issues',
+      url: `https://localhost:3002/solutions/${slug}#comparison-table`,
+      image: 'https://example.com/comparison-chart.png',
+      itemReviewed: painPoint.title,
+      reviewAspect: ['Detection Speed', 'Monthly Tax (Cost)', 'Privacy Control'],
+      audience: {
+        '@type': 'Audience',
+        name: 'Blockchain developers and investors'
+      }
+    };
+
+    const faqScript = createJsonLdScript(faqData);
+    const howToScript = createJsonLdScript(howToData);
+    const comparisonScript = createJsonLdScript(comparisonSchemaData);
+
+    return () => {
+      if (document.head.contains(faqScript)) {
+        document.head.removeChild(faqScript);
+      }
+      if (document.head.contains(howToScript)) {
+        document.head.removeChild(howToScript);
+      }
+      if (document.head.contains(comparisonScript)) {
+        document.head.removeChild(comparisonScript);
+      }
+    };
+  }, [painPoint, faqItems, howToSteps, slug]);
 
   const handleAuditSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -192,40 +261,6 @@ export default function SolutionDetailPage() {
           </div>
         </div>
       </div>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqItems.map((item, index) => ({
-              '@type': 'Question',
-              name: item.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer
-              }
-            }))
-          })
-        }}
-      />
-      
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'HowTo',
-            name: `How to Mitigate ${painPoint.title}`,
-            step: howToSteps.map((step, index) => ({
-              '@type': 'HowToStep',
-              name: step.name,
-              text: step.text
-            }))
-          })
-        }}
-      />
 
       <main className="py-12 px-4">
         <div className="max-w-[1200px] mx-auto">
@@ -301,6 +336,69 @@ export default function SolutionDetailPage() {
                   </button>
                 </form>
               </div>
+              
+              {comparisonInfo && (
+                <div className="mb-10">
+                  <h2 className="text-2xl font-bold mb-6 text-slate-900">Why the current {comparisonInfo.keyword} SaaS industry is failing you</h2>
+                  <VerdictTable keyword={comparisonInfo.keyword} saasPrice={comparisonInfo.saasPrice} />
+                  
+                  <div className="mt-10">
+                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                      LOGIC X-RAY
+                    </h3>
+                    <div className="bg-zinc-900 text-green-400 p-6 rounded-lg font-mono text-sm overflow-x-auto">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2">
+                          <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                          <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+                          <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                        </div>
+                        <div className="text-zinc-400 text-xs">logic-xray.js</div>
+                      </div>
+                      <pre className="whitespace-pre">{`// Step 1: Scan GoPlus for Honeypot traps [1.5]
+const risk = await goPlus.checkBridgeContract(CA);
+
+// Step 2: Monitor sudden liquidity pull [1.2]
+if (pool.liquidity < threshold) executeAutoSell();
+
+// Step 3: Detect smart contract vulnerabilities [1.5]
+const vulnerabilities = await scanContractForVulnerabilities(CA);
+
+// Step 4: Analyze token ownership distribution [1.2]
+const ownership = await analyzeTokenOwnership(CA);
+
+// Step 5: Cross-chain bridge security check [1.5]
+const bridgeRisk = await checkBridgeSecurity(bridgeAddress);
+
+// Step 6: Real-time alert system [1.1]
+if (risk > highThreshold) sendInstantAlert();`}</pre>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8 bg-zinc-900 text-white p-6 rounded-lg">
+                    <div className="flex items-start gap-4">
+                      <div className="w-16 h-16 rounded-full bg-zinc-800 flex items-center justify-center">
+                        <svg className="w-10 h-10 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-green-400 mb-2">The Anti-Rug Operative</h4>
+                        <p className="text-zinc-400 text-sm leading-relaxed">
+                          I spent 5 years watching degens get wiped out by $10B+ in bridge hacks [1.3]. I built this tool to make high-level security accessible to everyone, not just corporations paying SaaS taxes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <button className="w-full bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 animate-pulse flex items-center justify-center gap-2">
+                      <span>DESTROY BRIDGE VULNERABILITIES NOW</span>
+                    </button>
+                  </div>
+                </div>
+              )}
               
               <div className="prose max-w-none mb-8">
                 <ReactMarkdown>{processedContent}</ReactMarkdown>
