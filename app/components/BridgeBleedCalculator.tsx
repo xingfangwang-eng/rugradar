@@ -290,6 +290,11 @@ setInterval(async () => {
       <p className="text-zinc-600 text-xs text-center mt-4">
         *Calculations based on historical cross-chain bridge hack data. Average detection time may vary.
       </p>
+      
+      {/* Platform Optimization */}
+      <p className="text-zinc-500 text-xs text-center mt-2">
+        Optimized for Solana, Base, and Ethereum bridge standards in 2026.
+      </p>
     </div>
   );
 }
