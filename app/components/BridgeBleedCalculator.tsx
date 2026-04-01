@@ -161,6 +161,63 @@ export default function BridgeBleedCalculator() {
         </span>
       </a>
 
+      {/* The Verdict Table */}
+      <div className="mt-8">
+        <h4 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
+          <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+          The Verdict Table
+        </h4>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-zinc-800">
+                <th className="text-left py-3 px-4 text-zinc-400 font-medium">Comparison</th>
+                <th className="text-left py-3 px-4 text-zinc-400 font-medium">Traditional SaaS</th>
+                <th className="text-left py-3 px-4 text-zinc-400 font-medium">RugRadar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-zinc-800">
+                <td className="py-4 px-4 text-zinc-300 font-medium">Scan Frequency</td>
+                <td className="py-4 px-4 text-zinc-500 text-sm">
+                  Hourly / Daily
+                </td>
+                <td className="py-4 px-4 text-white font-bold border-l-2 border-green-500 pl-6">
+                  Real-time (&lt; 1 sec)
+                </td>
+              </tr>
+              <tr className="border-b border-zinc-800">
+                <td className="py-4 px-4 text-zinc-300 font-medium">Cost</td>
+                <td className="py-4 px-4 text-zinc-500 text-sm">
+                  $5,000+/month
+                </td>
+                <td className="py-4 px-4 text-white font-bold border-l-2 border-green-500 pl-6">
+                  $0 (Self-hosted / Free API)
+                </td>
+              </tr>
+              <tr className="border-b border-zinc-800">
+                <td className="py-4 px-4 text-zinc-300 font-medium">Response</td>
+                <td className="py-4 px-4 text-zinc-500 text-sm">
+                  Email / Manual Alert
+                </td>
+                <td className="py-4 px-4 text-white font-bold border-l-2 border-green-500 pl-6">
+                  Auto-Sell / Instant Webhook
+                </td>
+              </tr>
+              <tr>
+                <td className="py-4 px-4 text-zinc-300 font-medium">Focus</td>
+                <td className="py-4 px-4 text-zinc-500 text-sm">
+                  Generic Security
+                </td>
+                <td className="py-4 px-4 text-white font-bold border-l-2 border-green-500 pl-6">
+                  Anti-Rug & Bridge Anomalies
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Disclaimer */}
       <p className="text-zinc-600 text-xs text-center mt-4">
         *Calculations based on historical cross-chain bridge hack data. Average detection time may vary.
