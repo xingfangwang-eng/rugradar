@@ -34,6 +34,8 @@ export default function SolutionDetailPage() {
   const [showFloatingTool, setShowFloatingTool] = useState(false);
   const [tokenAddress, setTokenAddress] = useState('');
   const [comparisonInfo, setComparisonInfo] = useState<{ keyword: string; saasPrice: string } | null>(null);
+  const [tvl, setTvl] = useState<number>(10000000);
+  const [notificationTime, setNotificationTime] = useState<number>(30);
 
   useEffect(() => {
     if (!slug) return;
@@ -336,6 +338,70 @@ export default function SolutionDetailPage() {
                   </button>
                 </form>
               </div>
+              
+              {painPoint?.slug === 'bridge-security' && (
+                <div className="mb-10 bg-zinc-900 text-white p-8 rounded-lg shadow-lg relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-red-500 animate-pulse"></div>
+                  <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                    The Bridge Bleed Calculator
+                  </h2>
+                  
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Your Bridge TVL (in USD)
+                      </label>
+                      <div className="flex items-center gap-4">
+                        <input
+                          type="range"
+                          min="1000000"
+                          max="100000000"
+                          step="1000000"
+                          value={tvl}
+                          onChange={(e) => setTvl(Number(e.target.value))}
+                          className="flex-1 h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer"
+                        />
+                        <span className="text-lg font-bold text-white">${tvl.toLocaleString()}</span>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Traditional SaaS Notification Time (minutes)
+                      </label>
+                      <div className="flex items-center gap-4">
+                        <input
+                          type="range"
+                          min="1"
+                          max="120"
+                          step="1"
+                          value={notificationTime}
+                          onChange={(e) => setNotificationTime(Number(e.target.value))}
+                          className="flex-1 h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer"
+                        />
+                        <span className="text-lg font-bold text-white">{notificationTime} min</span>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-8 p-6 bg-zinc-800 rounded-lg border border-zinc-700">
+                      <p className="text-zinc-300 mb-4">
+                        <span className="text-red-400 font-semibold">WARNING:</span> Average hack speed for cross-chain bridges is 120 seconds. 
+                        If a hack happens, your ${tvl.toLocaleString()} TVL will be drained before the SaaS alerts you.
+                      </p>
+                      <p className="text-green-400 font-bold text-lg">
+                        RugRadar scans in &lt; 1 second.[1] We catch it before the first block completes.[1.5]
+                      </p>
+                    </div>
+                    
+                    <div className="mt-6">
+                      <button className="w-full bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 animate-pulse flex items-center justify-center gap-2">
+                        <span>Arm Your Bridge Now (Scan for $0)</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
               
               {comparisonInfo && (
                 <div className="mb-10">
